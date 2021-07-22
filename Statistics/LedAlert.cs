@@ -8,7 +8,7 @@ namespace Statistics
     {
 
         public bool ledGlows;
-        void Alert(double maxThreshold, double max)
+       public void Alert(double maxThreshold, double max)
         {
             if (max > maxThreshold)
             {
