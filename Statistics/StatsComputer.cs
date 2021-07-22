@@ -4,23 +4,22 @@ using System.Collections.Generic;
   namespace Statistics
 {
     public class StatsComputer
-    {
-        public double average;
-        public double max;
-        public double min;
+    {      
 
         public StatisticsDataModel CalculateStatistics(List<float> numbers)
         {   
+       double average= numbers[0];
+       double max =numbers[0];
+        double min=numbers[0];
 
-            this.max = numbers[0];
-            this.min = numbers[0];
-            this.average = numbers[0];
+           
+          
             var sum = 0f;
             if (numbers.Count == 0)
             {
-                this.max = Double.NaN;
-                this.min = Double.NaN;
-                this.average = Double.NaN;
+                max = Double.NaN;
+                min = Double.NaN;
+                average = Double.NaN;
                 
 	
             }
@@ -29,24 +28,24 @@ using System.Collections.Generic;
                 foreach(var number in numbers)
             {
                 
-                    if (number > this.max)
-                        this.max = number;
-                    if (number < this.min)
-                        this.min = number;
+                    if (number > max)
+                        max = number;
+                    if (number < min)
+                        min = number;
                     sum += number;
             }
                 
-                this.average = sum / numbers.Count;
+                average = sum / numbers.Count;
         
          
 
             
             }
-                   return (new StatisticsDataModel{
-			min=this.min,
-			max=this.max,
-			average=this.average
-		});
+           return new StatisticsDataModel{
+			min= min,
+			max=max,
+			average=average
+		};
 
             }
         }
