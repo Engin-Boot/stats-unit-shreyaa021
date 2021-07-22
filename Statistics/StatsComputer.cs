@@ -9,27 +9,27 @@ using System.Collections.Generic;
         public double max;
         public double min;
 
-        public StatisticsDataModel CalculateStatistics(List<double> numbers)
+        public StatisticsDataModel CalculateStatistics(List<float> numbers)
         {   
 
             this.max = numbers[0];
             this.min = numbers[0];
-            this.average = 0;
+            var sum = 0f;
             if (numbers.Count == 0)
              return new StatisticsDataModel();
     
            
-                foreach(double number in numbers)
+                foreach(var number in numbers)
             {
                 
                     if (number > this.max)
                         this.max = number;
                     if (number < this.min)
                         this.min = number;
-                    this.average += number;
+                    sum += number;
             }
                 
-                this.average = this.average / numbers.Count;
+                this.average = sum / numbers.Count;
         
                 return (new StatisticsDataModel(this.max,this. min, this.average));
 
