@@ -17,7 +17,7 @@ namespace Statistics
                 Alerters.Add(alerters[i]);
         }
        
-        public void CheckStatisticsandAlert(List<double> numbers)
+        public void CheckStatisticsandAlert(List<float> numbers)
         {
             var statsComputer = new StatsComputer();
             var max = statsComputer.CalculateStatistics(numbers).max;
