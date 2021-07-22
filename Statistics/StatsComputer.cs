@@ -16,8 +16,13 @@ using System.Collections.Generic;
             this.min = numbers[0];
             var sum = 0f;
             if (numbers.Count == 0)
-             return new StatisticsDataModel();
-    
+
+            {
+                this.max = Double.NaN;
+                this.min = Double.NaN;
+                this.average = Double.NaN;
+                return new StatisticsDataModel(this.max, this.min, this.average);
+            }
            
                 foreach(var number in numbers)
             {
