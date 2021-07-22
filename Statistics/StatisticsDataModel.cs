@@ -7,9 +7,9 @@ namespace Statistics
 {
     public class StatisticsDataModel
     {
-        public double max;
-        public double min;
-        public double average;
+        public double max {get ;set ;}
+        public double min {get;set;}
+        public double average{get ;set;}
 
 
 
