@@ -10,8 +10,7 @@ namespace Statistics.Test
         public void ReportsAverageMinMax()
         {
             var statsComputer = new StatsComputer();
-            var statistics = statsComputer.CalculateStatistics(
-                new List<double>{1.5, 8.9, 3.2, 4.5});
+            var statistics = statsComputer.CalculateStatistics(new List<double>{1.5, 8.9, 3.2, 4.5});
             float epsilon = 0.001F;
             Assert.True(Math.Abs(statistics.average - 4.525) <= epsilon);
             Assert.True(Math.Abs(statistics.max - 8.9) <= epsilon);
@@ -33,11 +32,11 @@ namespace Statistics.Test
         public void RaisesAlertsIfMaxIsMoreThanThreshold()
         {
             var emailAlert = new EmailAlert();
-            var ledAlert = new LEDAlert();
-            IAlert[] alerters = {EmailAlert, LedAlert};
+            var ledAlert = new LedAlert();
+            IAlert[] alerters = { emailAlert, ledAlert };
 
             const float maxThreshold = 10.2;
-            var statsAlerter = new AlertHandler(maxThreshold, alerters);
+            AlertHandler statsAlerter = new AlertHandler(maxThreshold, alerters);
             statsAlerter.CheckStatisticsandAlert(new List<double>{0.2, 11.9, 4.3, 8.5});
 
             Assert.True(emailAlert.emailSent);
