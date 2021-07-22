@@ -5,37 +5,33 @@ using System.Collections.Generic;
 {
     public class StatsComputer
     {
-
-
-
-        public StatisticsDataModel CalculateStatistics(List<double> numbers)
-        {
-
-
         public double average;
         public double max;
         public double min;
 
-        max = numbers[0];
-            min = numbers[0];
-            average = 0;
+        public StatisticsDataModel CalculateStatistics(List<double> numbers)
+        {   
+
+            this.max = numbers[0];
+            this.min = numbers[0];
+            this.average = 0;
             if (numbers.Count == 0)
              return new StatisticsDataModel();
     
            
-                for (int i=0; i<numbers.Count;i++) 
+                foreach(double number in numbers)
             {
                 
-                    if (numbers[i] > max)
-                        max = numbers[i];
-                    if (numbers[i] < min)
-                        min = numbers[i];
-                    average += numbers[i];
+                    if (number > this.max)
+                        this.max = number;
+                    if (numbers[i] < this.min)
+                        this.min = number;
+                    this.average += number;
             }
                 
-                average = average / numbers.Count;
+                this.average. = this.average / numbers.Count;
         
-                return (new StatisticsDataModel(max, min, average));
+                return (new StatisticsDataModel(this.max,this. min, this.average));
 
             
 
