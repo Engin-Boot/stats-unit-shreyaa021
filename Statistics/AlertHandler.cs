@@ -19,8 +19,8 @@ namespace Statistics
        
         public void CheckAndAlert(List<double> numbers)
         {
-            var maxminaverage = StatsComputer.CalculateStatistics(numbers);
-            double max = maxminaverage.max;
+            var maxminaverage = StatsComputer.CalculateStatistics(numbers).max;
+     
           
             foreach(IAlert alerter in Alerters)
             { 
