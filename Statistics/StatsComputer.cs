@@ -39,7 +39,7 @@ using System.Collections.Generic;
                 return (new StatisticsDataModel{
 			min=this.min,
 			max=this.max,
-			average=this.averageaverage
+			average=this.average
 		});
 
             
