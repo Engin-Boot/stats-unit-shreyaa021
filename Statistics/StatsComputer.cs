@@ -14,6 +14,7 @@ using System.Collections.Generic;
 
             this.max = numbers[0];
             this.min = numbers[0];
+            this.average = numbers[0];
             var sum = 0f;
             if (numbers.Count == 0)
 
