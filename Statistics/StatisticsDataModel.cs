@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Statistics
 {
-    class StatisticsDataModel
+   public class StatisticsDataModel
     {
         public double max;
        public double min;
