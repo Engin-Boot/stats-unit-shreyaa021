@@ -24,9 +24,9 @@ namespace Statistics
 }
 public StatisticsDataModel()
 {
-    this.max = Double.NAN;
-    this.min = Double.NAN;
-    this.average = Double.NAN;
+    this.max = Double.NaN;
+    this.min = Double.NaN;
+    this.average = Double.NaN;
 
 
 }
