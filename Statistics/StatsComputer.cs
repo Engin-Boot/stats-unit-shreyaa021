@@ -24,7 +24,7 @@ using System.Collections.Generic;
                 
                     if (number > this.max)
                         this.max = number;
-                    if (numbers[i] < this.min)
+                    if (number < this.min)
                         this.min = number;
                     this.average += number;
             }
