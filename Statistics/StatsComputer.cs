@@ -14,13 +14,13 @@ namespace Statistics
             max = numbers[0];
             min = numbers[0];
             average = 0;
-            if (numbers.count == 0)
+            if (numbers.Count == 0)
             {
                 return new StatisticsDataModel();
             }
             else
             {
-                for (int i=0; i< numbers.Coumt;i++)
+                for (int i=0; i< numbers.Count;i++)
                 {
                     if (numbers[i] > max)
                         max = numbers[i];
