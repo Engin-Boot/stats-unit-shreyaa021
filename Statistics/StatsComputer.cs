@@ -36,16 +36,9 @@ using System.Collections.Generic;
             }
                 
                 average = sum / numbers.Count;
-        
-         
-
-            
+                    
             }
-           return new StatisticsDataModel{
-			min= min,
-			max=max,
-			average=average
-		};
+           return new StatisticsDataModel(max,min,average);
 
             }
         }
