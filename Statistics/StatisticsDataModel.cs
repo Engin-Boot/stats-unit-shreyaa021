@@ -12,8 +12,8 @@ namespace Statistics
        public double average  ;
 
 
-        }
-}
+        
+
     public StatisticsDataModel(double max ,double min ,double average)
 {
     this.max = max;
@@ -29,4 +29,6 @@ public StatisticsDataModel()
     this.average = Double.NAN;
 
 
+}
+   }
 }
