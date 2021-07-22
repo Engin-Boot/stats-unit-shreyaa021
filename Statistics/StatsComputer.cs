@@ -17,7 +17,6 @@ using System.Collections.Generic;
             this.average = numbers[0];
             var sum = 0f;
             if (numbers.Count == 0)
-
             {
                 this.max = Double.NaN;
                 this.min = Double.NaN;
@@ -37,7 +36,11 @@ using System.Collections.Generic;
                 
                 this.average = sum / numbers.Count;
         
-                return (new StatisticsDataModel(this.max,this.min, this.average));
+                return (new StatisticsDataModel{
+			min=this.min,
+			max=this.max,
+			average=this.averageaverage
+		});
 
             
 
