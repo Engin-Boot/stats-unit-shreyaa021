@@ -12,7 +12,7 @@ namespace Statistics.Test
         {
             var statsComputer = new StatsComputer();
           
-            var statistics = statsComputer.CalculateStatistics(new List<double> {1.5f, 8.9f ,3.2f, 4.5f});
+            var statistics = statsComputer.CalculateStatistics(new List<float> {1.5f, 8.9f ,3.2f, 4.5f});
             float epsilon = 0.001F;
             Assert.True(Math.Abs(statistics.average - 4.525) <= epsilon);
             Assert.True(Math.Abs(statistics.max - 8.9) <= epsilon);
