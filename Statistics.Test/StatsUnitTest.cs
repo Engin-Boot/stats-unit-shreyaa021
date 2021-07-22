@@ -10,20 +10,18 @@ namespace Statistics.Test
         public void ReportsAverageMinMax()
         {
             var statsComputer = new StatsComputer();
-            var computedStats = statsComputer.CalculateStatistics(
+            var statistics = statsComputer.CalculateStatistics(
                 new List<double>{1.5, 8.9, 3.2, 4.5});
             float epsilon = 0.001F;
-            Assert.True(Math.Abs(statsComputer.average - 4.525) <= epsilon);
-            Assert.True(Math.Abs(statsComputer.max - 8.9) <= epsilon);
-            Assert.True(Math.Abs(statsComputer.min - 1.5) <= epsilon);
+            Assert.True(Math.Abs(statistics.average - 4.525) <= epsilon);
+            Assert.True(Math.Abs(statistics.max - 8.9) <= epsilon);
+            Assert.True(Math.Abs(statistics.min - 1.5) <= epsilon);
         }
         [Fact]
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatsComputer();
-            var Statistics = statsComputer.CalculateStatistics(   new List<double>{     
-            
-            });
+            var Statistics = statsComputer.CalculateStatistics(new List<double> { });
             Assert.True(Double.NaN.Equals(Statistics.average));
             Assert.True(Double.NaN.Equals(Statistics.max));
             Assert.True(Double.NaN.Equals(Statistics.min));

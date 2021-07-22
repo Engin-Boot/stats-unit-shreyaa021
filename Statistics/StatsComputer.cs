@@ -6,14 +6,16 @@ namespace Statistics
     public class StatsComputer
     {
 
-        double average;
-        double max;
-        double min;
+     
 
         public  StatisticsDataModel CalculateStatistics(List<double> numbers) {
-           
-           
-            max = numbers[0];
+
+
+        public double average;
+        public double max;
+        public double min;
+
+        max = numbers[0];
             min = numbers[0];
             average = 0;
             if (numbers.Count == 0)
