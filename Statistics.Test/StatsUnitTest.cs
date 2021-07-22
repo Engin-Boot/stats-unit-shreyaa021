@@ -22,7 +22,7 @@ namespace Statistics.Test
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatsComputer();
-            var Statistics = statsComputer.CalculateStatistics(new List<double> { });
+            var Statistics = statsComputer.CalculateStatistics(new List<float> { });
             Assert.True(Double.NaN.Equals(Statistics.average));
             Assert.True(Double.NaN.Equals(Statistics.max));
             Assert.True(Double.NaN.Equals(Statistics.min));
@@ -39,7 +39,7 @@ namespace Statistics.Test
             List<IAlert> alerters = new List<IAlert>(alerts);
             const float maxThreshold = 10.2;
             AlertHandler statsAlerter = new AlertHandler(maxThreshold, alerters);
-            statsAlerter.CheckStatisticsandAlert(new List<double>{0.2, 11.9, 4.3, 8.5});
+            statsAlerter.CheckStatisticsandAlert(new List<float>{0.2f, 11.9f, 4.3f, 8.5f});
 
             Assert.True(emailAlert.emailSent);
             Assert.True(ledAlert.ledGlows);
