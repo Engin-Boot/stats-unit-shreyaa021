@@ -8,7 +8,7 @@ namespace Statistics
         double average;
         double max;
         double min;
-        public StatisticsDataModel CalculateStatistics(List<double> numbers) {
+        public static StatisticsDataModel CalculateStatistics(List<double> numbers) {
            
            
             max = numbers[0];
