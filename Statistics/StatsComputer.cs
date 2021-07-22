@@ -21,8 +21,10 @@ using System.Collections.Generic;
                 this.max = Double.NaN;
                 this.min = Double.NaN;
                 this.average = Double.NaN;
-                return new StatisticsDataModel(this.max, this.min, this.average);
+                
+	
             }
+            else {
            
                 foreach(var number in numbers)
             {
@@ -36,14 +38,15 @@ using System.Collections.Generic;
                 
                 this.average = sum / numbers.Count;
         
-                return (new StatisticsDataModel{
+         
+
+            
+            }
+                   return (new StatisticsDataModel{
 			min=this.min,
 			max=this.max,
 			average=this.average
 		});
-
-            
-
 
             }
         }
