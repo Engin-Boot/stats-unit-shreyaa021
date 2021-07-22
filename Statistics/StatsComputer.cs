@@ -29,7 +29,7 @@ using System.Collections.Generic;
                     this.average += number;
             }
                 
-                this.average. = this.average / numbers.Count;
+                this.average = this.average / numbers.Count;
         
                 return (new StatisticsDataModel(this.max,this. min, this.average));
 
