@@ -5,9 +5,9 @@ namespace Statistics
 {
     public class StatsComputer
     {
-        double static average;
-        double static max;
-        double static min;
+      static  double  average;
+     static   double  max;
+      static  double min;
         public static StatisticsDataModel CalculateStatistics(List<double> numbers) {
            
            
