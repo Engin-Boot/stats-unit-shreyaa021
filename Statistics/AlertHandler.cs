@@ -10,7 +10,7 @@ namespace Statistics
         public double threshold;
 
 
-        public AlertHandler(double maxThreshold, List<IAlerter> alerters)
+        public AlertHandler(double maxThreshold, List<IAlert> alerters)
         {
             threshold = maxThreshold;
             for (int i = 0; i < alerters.Count; i++)
