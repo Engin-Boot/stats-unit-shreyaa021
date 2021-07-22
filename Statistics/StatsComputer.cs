@@ -37,7 +37,7 @@ using System.Collections.Generic;
                 
                 this.average = sum / numbers.Count;
         
-                return (new StatisticsDataModel(this.max,this. min, this.average));
+                return (new StatisticsDataModel(this.max,this.min, this.average));
 
             
 
