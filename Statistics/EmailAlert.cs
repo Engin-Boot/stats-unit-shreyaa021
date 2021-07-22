@@ -7,7 +7,7 @@ namespace Statistics
     class EmailAlert :IAlert
     {
         public bool emailSent;
-        void Alert(double maxThreshold, double max)
+      public  void Alert(double maxThreshold, double max)
         {
             if (max > maxThreshold)
             {
