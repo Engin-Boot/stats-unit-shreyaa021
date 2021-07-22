@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Statistics
 {
-    interface IAlert
+    public interface IAlert
     {
-       public void Alert(double maxThreshold, double max);
+       void Alert(double maxThreshold, double max);
     }
 }
