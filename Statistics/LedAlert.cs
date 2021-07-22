@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Statistics
 {
-    class LedAlert : IAlert
+   public  class LedAlert : IAlert
     {
 
         public bool ledGlows;

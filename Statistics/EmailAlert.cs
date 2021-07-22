@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Statistics
 {
-    class EmailAlert :IAlert
+    public class EmailAlert :IAlert
     {
         public bool emailSent;
-      public  void Alert(double maxThreshold, double max)
+       public  void Alert(double maxThreshold, double max)
         {
             if (max > maxThreshold)
             {

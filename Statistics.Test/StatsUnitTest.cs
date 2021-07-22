@@ -21,8 +21,12 @@ namespace Statistics.Test
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatsComputer();
-            var computedStats = statsComputer.CalculateStatistics(
-                new List<double>{});
+            var Statistics = statsComputer.CalculateStatistics(   new List<double>{     
+            
+            });
+            Assert.True(Double.NaN.Equals(Statistics.average));
+            Assert.True(Double.NaN.Equals(Statistics.max));
+            Assert.True(Double.NaN.Equals(Statistics.min));
             //All fields of computedStats (average, max, min) must be
             //Double.NaN (not-a-number), as described in
             //https://docs.microsoft.com/en-us/dotnet/api/system.double.nan?view=netcore-3.1
@@ -36,7 +40,7 @@ namespace Statistics.Test
 
             const float maxThreshold = 10.2;
             var statsAlerter = new AlertHandler(maxThreshold, alerters);
-            statsAlerter.checkAndAlert(new List<double>{0.2, 11.9, 4.3, 8.5});
+            statsAlerter.CheckStatisticsandAlert(new List<double>{0.2, 11.9, 4.3, 8.5});
 
             Assert.True(emailAlert.emailSent);
             Assert.True(ledAlert.ledGlows);

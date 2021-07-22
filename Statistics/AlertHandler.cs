@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Statistics
 {
-    class AlertHandler
+    public class AlertHandler
     {   
         List<IAlert> Alerters = new List<IAlert>();
-        public double threshold;
+         public double threshold;
 
 
         public AlertHandler(double maxThreshold, List<IAlert> alerters)
@@ -17,9 +17,10 @@ namespace Statistics
                 Alerters.Add(alerters[i]);
         }
        
-        public void CheckAndAlert(List<double> numbers)
+        public void CheckStatisticsandAlert(List<double> numbers)
         {
-            var max = StatsComputer.CalculateStatistics(numbers).max;
+            var statsComputer = new StatsComputer();
+            var max = statsComputer.CalculateStatistics(numbers).max;
      
           
             foreach(IAlert alerter in Alerters)
